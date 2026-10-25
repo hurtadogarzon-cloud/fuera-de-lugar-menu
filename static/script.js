@@ -508,15 +508,25 @@ document.addEventListener("DOMContentLoaded", () => {
     let inicioX = 0;
     let inicioY = 0;
     let arrastrando = false;
+    let ultimoCambio = 0;
+    const BLOQUEO_CAMBIO = 500;
 
     function navegarCategoria(diferenciaX, diferenciaY) {
         // Solo aceptar movimientos principalmente horizontales.
         if (
-            Math.abs(diferenciaX) < 70 ||
+            Math.abs(diferenciaX) < 90 ||
             Math.abs(diferenciaX) < Math.abs(diferenciaY) * 1.4
         ) {
             return;
         }
+        
+        const ahora = Date.now();
+        
+        if (ahora - ultimoCambio < BLOQUEO_CAMBIO) {
+            return;
+        }
+        
+        ultimoCambio = ahora;
 
         const botones = Array.from(
             barraCategorias.querySelectorAll(".categoria")
