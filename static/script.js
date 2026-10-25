@@ -344,6 +344,7 @@ const formatoPrecio = (valor) => {
     }).format(valor);
 };
 
+
 function crearTarjeta(producto) {
     const tarjeta = document.createElement("article");
     tarjeta.className = "producto";
@@ -365,12 +366,10 @@ function crearTarjeta(producto) {
                 <strong>${formatoPrecio(producto.precio)}</strong>
             </div>
             <div class="precio">
-                <span>EN EQUI 🍟🥤</span>
+                <span>EN EQUIPO 🍟🥤</span>
                 <strong>${formatoPrecio(producto.precio + 10000)}</strong>
             </div>
         `;
-
-        tarjeta.append(titulo, descripcion, precios);
     } else {
         precios.innerHTML = `
             <div class="precio">
@@ -378,9 +377,9 @@ function crearTarjeta(producto) {
                 <strong>${formatoPrecio(producto.precio)}</strong>
             </div>
         `;
-
-        tarjeta.append(titulo, descripcion, precios);
     }
+
+    tarjeta.append(titulo, descripcion, precios);
 
     return tarjeta;
 }
