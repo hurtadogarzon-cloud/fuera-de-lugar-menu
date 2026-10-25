@@ -499,86 +499,75 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-/* Navegación secuencial: un gesto = una categoría */
-document.addEventListener("DOMContentLoaded", () => {
-    const barraCategorias = document.querySelector(".categorias");
 
-    if (!barraCategorias) return;
+/* Navegación secuencial: un gesto, una categoría */
+document.addEventListener("DOMContentLoaded", () => {
+    const barra = document.querySelector(".categorias");
+    if (!barra) return;
 
     let inicioX = 0;
     let inicioY = 0;
-    let inicioValido = false;
-    let ultimoCambio = 0;
+    let gestoActivo = false;
+    let bloqueado = false;
 
     const DISTANCIA_MINIMA = 80;
-    const PAUSA_CAMBIO = 350;
+    const PAUSA = 700;
 
-    // Pointer Events unifica los gestos del mouse y la pantalla táctil.
-    // Evita registrar el mismo gesto mediante touch y mouse por separado.
-    document.addEventListener("pointerdown", evento => {
-        if (evento.pointerType === "mouse" && evento.button !== 0) {
-            inicioValido = false;
-            return;
-        }
+    document.addEventListener("pointerdown", (e) => {
+        if (e.pointerType === "mouse" && e.button !== 0) return;
 
-        inicioX = evento.clientX;
-        inicioY = evento.clientY;
-        inicioValido = true;
+        inicioX = e.clientX;
+        inicioY = e.clientY;
+        gestoActivo = true;
     }, { passive: true });
 
-    document.addEventListener("pointerup", evento => {
-        if (!inicioValido) return;
-        inicioValido = false;
+    document.addEventListener("pointerup", (e) => {
+        if (!gestoActivo) return;
+        gestoActivo = false;
 
-        const diferenciaX = evento.clientX - inicioX;
-        const diferenciaY = evento.clientY - inicioY;
+        if (bloqueado) return;
 
-        // Ignorar movimientos cortos o principalmente verticales.
+        const dx = e.clientX - inicioX;
+        const dy = e.clientY - inicioY;
+
         if (
-            Math.abs(diferenciaX) < DISTANCIA_MINIMA ||
-            Math.abs(diferenciaX) < Math.abs(diferenciaY) * 1.5
+            Math.abs(dx) < DISTANCIA_MINIMA ||
+            Math.abs(dx) < Math.abs(dy) * 1.5
         ) {
             return;
         }
 
-        const ahora = Date.now();
+        const botones = [
+            ...barra.querySelectorAll(".categoria")
+        ];
 
-        if (ahora - ultimoCambio < PAUSA_CAMBIO) return;
-
-        // Obtener el orden real de los botones del menú.
-        const botones = Array.from(
-            barraCategorias.querySelectorAll(".categoria")
-        );
-
-        const indiceActual = botones.findIndex(
+        const actual = botones.findIndex(
             boton => boton.classList.contains("activa")
         );
 
-        if (indiceActual === -1) return;
+        if (actual < 0) return;
 
-        // Izquierda: siguiente. Derecha: anterior.
-        const siguienteIndice = indiceActual + (diferenciaX < 0 ? 1 : -1);
+        const destino = actual + (dx < 0 ? 1 : -1);
 
-        // No saltar del principio al final ni del final al principio.
-        if (
-            siguienteIndice < 0 ||
-            siguienteIndice >= botones.length
-        ) {
-            return;
-        }
+        if (destino < 0 || destino >= botones.length) return;
 
-        ultimoCambio = ahora;
+        // Bloquear antes de ejecutar el clic.
+        bloqueado = true;
 
-        botones[siguienteIndice].click();
+        botones[destino].click();
 
-        botones[siguienteIndice].scrollIntoView({
+        botones[destino].scrollIntoView({
             behavior: "smooth",
             block: "nearest",
             inline: "center"
         });
+
+        setTimeout(() => {
+            bloqueado = false;
+        }, PAUSA);
     }, { passive: true });
 
     document.addEventListener("pointercancel", () => {
-        inicioValido = false;
+        gestoActivo = false;
     }, { passive: true });
 });
