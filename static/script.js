@@ -499,7 +499,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-/* Navegación entre categorías con mouse y pantalla táctil */
+/* Navegación secuencial: un gesto = una categoría */
 document.addEventListener("DOMContentLoaded", () => {
     const barraCategorias = document.querySelector(".categorias");
 
@@ -507,27 +507,45 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let inicioX = 0;
     let inicioY = 0;
-    let arrastrando = false;
+    let inicioValido = false;
     let ultimoCambio = 0;
-    const BLOQUEO_CAMBIO = 500;
 
-    function navegarCategoria(diferenciaX, diferenciaY) {
-        // Solo aceptar movimientos principalmente horizontales.
+    const DISTANCIA_MINIMA = 80;
+    const PAUSA_CAMBIO = 350;
+
+    // Pointer Events unifica los gestos del mouse y la pantalla táctil.
+    // Evita registrar el mismo gesto mediante touch y mouse por separado.
+    document.addEventListener("pointerdown", evento => {
+        if (evento.pointerType === "mouse" && evento.button !== 0) {
+            inicioValido = false;
+            return;
+        }
+
+        inicioX = evento.clientX;
+        inicioY = evento.clientY;
+        inicioValido = true;
+    }, { passive: true });
+
+    document.addEventListener("pointerup", evento => {
+        if (!inicioValido) return;
+        inicioValido = false;
+
+        const diferenciaX = evento.clientX - inicioX;
+        const diferenciaY = evento.clientY - inicioY;
+
+        // Ignorar movimientos cortos o principalmente verticales.
         if (
-            Math.abs(diferenciaX) < 90 ||
-            Math.abs(diferenciaX) < Math.abs(diferenciaY) * 1.4
+            Math.abs(diferenciaX) < DISTANCIA_MINIMA ||
+            Math.abs(diferenciaX) < Math.abs(diferenciaY) * 1.5
         ) {
             return;
         }
-        
-        const ahora = Date.now();
-        
-        if (ahora - ultimoCambio < BLOQUEO_CAMBIO) {
-            return;
-        }
-        
-        ultimoCambio = ahora;
 
+        const ahora = Date.now();
+
+        if (ahora - ultimoCambio < PAUSA_CAMBIO) return;
+
+        // Obtener el orden real de los botones del menú.
         const botones = Array.from(
             barraCategorias.querySelectorAll(".categoria")
         );
@@ -538,57 +556,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (indiceActual === -1) return;
 
-        const nuevoIndice = diferenciaX < 0
-            ? indiceActual + 1
-            : indiceActual - 1;
+        // Izquierda: siguiente. Derecha: anterior.
+        const siguienteIndice = indiceActual + (diferenciaX < 0 ? 1 : -1);
 
-        if (nuevoIndice < 0 || nuevoIndice >= botones.length) return;
+        // No saltar del principio al final ni del final al principio.
+        if (
+            siguienteIndice < 0 ||
+            siguienteIndice >= botones.length
+        ) {
+            return;
+        }
 
-        const siguienteBoton = botones[nuevoIndice];
+        ultimoCambio = ahora;
 
-        siguienteBoton.click();
+        botones[siguienteIndice].click();
 
-        siguienteBoton.scrollIntoView({
+        botones[siguienteIndice].scrollIntoView({
             behavior: "smooth",
             block: "nearest",
             inline: "center"
         });
-    }
-
-    // Pantallas táctiles
-    document.addEventListener("touchstart", evento => {
-        const toque = evento.changedTouches[0];
-        inicioX = toque.clientX;
-        inicioY = toque.clientY;
     }, { passive: true });
 
-    document.addEventListener("touchend", evento => {
-        const toque = evento.changedTouches[0];
-
-        navegarCategoria(
-            toque.clientX - inicioX,
-            toque.clientY - inicioY
-        );
+    document.addEventListener("pointercancel", () => {
+        inicioValido = false;
     }, { passive: true });
-
-    // Computadora: arrastrar con el botón izquierdo del mouse
-    document.addEventListener("mousedown", evento => {
-        if (evento.button !== 0) return;
-
-        inicioX = evento.clientX;
-        inicioY = evento.clientY;
-        arrastrando = true;
-    });
-
-    document.addEventListener("mouseup", evento => {
-        if (!arrastrando) return;
-
-        arrastrando = false;
-
-        navegarCategoria(
-            evento.clientX - inicioX,
-            evento.clientY - inicioY
-        );
-    });
 });
-
