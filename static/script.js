@@ -3,67 +3,67 @@ const productos = {
     "Hamburguesas": [
         {
             nombre: "Chicharito",
-            descripcion: "150 g de carne seleccionada y madurada, pan brioche, queso cheddar, nachos, guacamole, pico de gallo, jalapeños, tacos, verduras frescas y papas a elección.",
+            descripcion: "150 gr de carne seleccionada y madurada, acompañada de un pan brioche, queso cheddar, guacamole, pico y gallo, jalapeños, verduras frescas y papas de tu elección (criolla, cascos, francesa).",
             precio: 27000,
             equipo: true
         },
         {
             nombre: "CR7 Cristiano Ronaldo",
-            descripcion: "150 g de carne seleccionada y madurada, acompañada de pan brioche, queso cheddar, salsa cuatro quesos, dos tocinetas caramelizadas, verduras frescas y papas a elección (criolla, cascos o francesa).",
+            descripcion: "150 gr de carne seleccionada y madurada, acompañada de un pan brioche, queso cheddar, salsa de 4 quesos, 2 tocineta caramelizadas, verduras frescas y papas de tu elección (criolla, cascos, francesa).",
             precio: 29000,
             equipo: true
         },
         {
             nombre: "Doble o Nada",
-            descripcion: "300 g de carne seleccionada y madurada, pan brioche, doble porción de tocineta y cheddar, verduras frescas y papas a elección.",
+            descripcion: "300 gr de carne seleccionada y madurada, acompañada de un pan brioche, doble porción de tocineta y queso cheddar, acompañada de verduras frescas y papas de tu elección (criolla, cascos, francesa).",
             precio: 36000,
             equipo: true
         },
         {
             nombre: "Tigre Falcao",
-            descripcion: "150 g de carne madurada, cheddar, 50 g de pulled pork, cebolla y tocineta caramelizada en vino tinto y miel, verduras frescas y papas a elección.",
+            descripcion: "150 g de carne madurada,pan brioche, queso cheddar, 50 g de pulled pork, cebolla y tocineta caramelizada en vino tinto y miel, verduras frescas y papas a elección.",
             precio: 30000,
             equipo: true
         },
         {
             nombre: "Fuera de Lugar",
-            descripcion: "150 g de carne madurada, pan brioche, cheddar, tocineta, aros de cebolla rellenos de queso, salsa de la casa, verduras frescas y papas a elección.",
+            descripcion: "150 gr de carne seleccionada y madurada, acompañada de un pan brioche, queso cheddar, tocineta, aros de cebolla. Sin olvidar nuestra exquisita salsa de la casa, verduras frescas con papas de tu elección (criolla, cascos, francesa).",
             precio: 28000,
             equipo: true
         },
         {
             nombre: "Caudio Pizarro",
-            descripcion: "150 g de carne madurada, cheddar, ceviche de chicharrón, cebolla morada, cilantro, aguacate y papas a elección.",
+            descripcion: "150 g de carne madurada,pan brioche, queso cheddar, ceviche de chicharrón, cebolla morada, cilantro, aguacate y papas a elección.",
             precio: 31000,
             equipo: true
         },
         {
             nombre: "Smash",
-            descripcion: "Dos monedas de carne seleccionada y madurada de 75 g, plancha, cheddar, tocineta, cebolla crispy y papas a elección.",
+            descripcion: "Dos monedas de carne seleccionada y madurada de 75g C/u, pan brioche, queso cheddar, tocineta, cebolla crispy y papas a elección.",
             precio: 26000,
             equipo: true
         },
         {
             nombre: "Totemham",
-            descripcion: "Hamburguesa de pollo crispy, pan brioche, ensalada coleslaw y papas a elección.",
+            descripcion: "Pechuga apanada en crispy, pan brioche, ensalada coleslaw y papas a elección.",
             precio: 26000,
             equipo: true
         },
         {
             nombre: "Hamburguesa Clásica",
-            descripcion: "150 g de carne madurada, pan brioche, cheddar, verduras frescas y papas a elección.",
+            descripcion: "150 gr de carne seleccionada y madurada, acompañada de un pan brioche, queso cheddar y verduras frescas.",
             precio: 19000,
             equipo: true
         },
         {
             nombre: "Lio Messi",
-            descripcion: "150 g de carne madurada, cheddar, tocineta, chorizo argentino, verduras frescas y papas a elección.",
+            descripcion: "150 gr de carne seleccionada y madurada, acompañada de un pan brioche, queso cheddar, tocineta, delicioso chorizo argentino, verduras frescas y papas de tu elección (criolla, cascos, francesa).",
             precio: 30000,
             equipo: true
         },
         {
             nombre: "Nairo Man",
-            descripcion: "150 g de carne madurada, cheddar, patacón, huevo frito, aguacate, verduras frescas y papas a elección.",
+            descripcion: "150 gr de carne seleccionada y madurada, acompañada de un pan brioche, queso cheddar, patacón, huevo frito, tajadas de aguacate, verduras frescas y papas de tu elección (criolla, cascos, francesa).",
             precio: 29000,
             equipo: true
         },
@@ -75,13 +75,13 @@ const productos = {
         },
         {
             nombre: "Pogba",
-            descripcion: "150 g de carne madurada, cheddar, 150 g de champiñones flameados con whiskey, verduras frescas y papas a elección.",
+            descripcion: "150 gr de carne seleccionada y madurada, acompañada de un pan brioche, queso cheddar, 150 gr de champiñones, salsa de la casa, verduras frescas y papas de tu elección (criolla, cascos, francesa).",
             precio: 28000,
             equipo: true
         },
         {
             nombre: "Todo Bien",
-            descripcion: "150 g de carne madurada, pan brioche, rodaja de queso frito, piña caramelizada artesanal, suero costeño, verduras frescas y papas a elección.",
+            descripcion: "150 gr de carne seleccionada y madurada, acompañada de un pan brioche, una rodaja de queso costeño frito, piña caramelizada de manera artesanal, suero costeño, verduras frescas y papas de tu elección (criolla, cascos, francesa).",
             precio: 30000,
             equipo: true
         }
@@ -108,12 +108,12 @@ const productos = {
     "Parrilla": [
         {
             nombre: "Baby Beef - Yamal",
-            descripcion: "300 g de lomo fino de res, tierno, asado a las brasas PIRA.",
+            descripcion: "300 g de lomo fino de res, tierno, asado a las brasas PIRA. Acompañado de ensalada fresca y papas a elección: francesas, casco o criollas.",
             precio: 63000
         },
         {
             nombre: "Churrasco - Maradona",
-            descripcion: "350 g de lomo ancho de res, brasas PIRA y chimichurri ahumado.",
+            descripcion: "350 g de lomo ancho de res, brasas PIRA y chimichurri ahumado, ensalada fresca y papas a elección (francesas, casco o criollas).",
             precio: 57000
         },
         {
@@ -123,27 +123,27 @@ const productos = {
         },
         {
             nombre: "Lomo Salteado",
-            descripcion: "250 g de lomo fino de res al wok con tomate, cebolla roja, arroz blanco y papas a elección.",
+            descripcion: "250 g de lomo fino de res al wok con tomate, cebolla roja, arroz blanco y papas a elección(francesas, casco o criollas).",
             precio: 60000
         },
         {
             nombre: "Pechuga Gratin - Cup",
-            descripcion: "350 g de pechuga de pollo a las brasas PIRA con queso fundido.",
+            descripcion: "350 g de pechuga de pollo a las brasas PIRA con queso fundido, acompañado de ensalada fresca y papas a elección (francesas, casco o criollas).",
             precio: 40000
         },
         {
             nombre: "Punta de Anca - R9 Nazario",
-            descripcion: "350 g de punta de anca a las brasas PIRA.",
+            descripcion: "350 g de punta de anca a las brasas PIRA., acompañado de ensalada fresca y papas a elección (francesas, casco o criollas).",
             precio: 67000
         },
         {
             nombre: "Pechuga Ranchera - Deport",
-            descripcion: "350 g de filete de pechuga, salsa ranchera, chorizo y mazorca desgranada.",
+            descripcion: "350 g de filete de pechuga, salsa ranchera, chorizo y mazorca desgranada, acompañado de ensalada fresca y papas a elección (francesas, casco o criollas).",
             precio: 47000
         },
         {
             nombre: "Tomahawk de Cerdo",
-            descripcion: "500 g de corte de cerdo con hueso, a las brasas PIRA.",
+            descripcion: "500 g de corte de cerdo con hueso, a las brasas PIRA, acompañado de ensalada fresca y papas a elección (francesas, casco o criollas).",
             precio: 51000
         },
         {
@@ -153,47 +153,47 @@ const productos = {
         },
         {
             nombre: "Picaña de Cerdo",
-            descripcion: "350 g de picaña de cerdo premium a la parrilla.",
+            descripcion: "350 g de picaña de cerdo premium a la parrilla, acompañado de ensalada fresca y papas a elección (francesas, casco o criollas).",
             precio: 49000
         },
         {
             nombre: "New York Steak - Luchito Díaz",
-            descripcion: "Corte premium de res a las brasas PIRA.",
+            descripcion: "Corte premium de res a las brasas PIRA, acompañado de ensalada fresca y papas a elección (francesas, casco o criollas).",
             precio: 60000
         },
         {
             nombre: "Filet Mignon - ZIZU",
-            descripcion: "260 g de lomo fino envuelto en tocineta, a las brasas, con demi-glace de champiñón.",
+            descripcion: "260 g de lomo fino envuelto en tocineta, a las brasas, con demi-glace de champiñón, acompañado de ensalada fresca y papas a elección (francesas, casco o criollas).",
             precio: 63000
         },
         {
             nombre: "Ribeye - Rivery",
-            descripcion: "Ribeye marmoleado a las brasas PIRA.",
+            descripcion: "Ribeye marmoleado a las brasas PIRA, acompañado de ensalada fresca y papas a elección (francesas, casco o criollas).",
             precio: 60000
         },
         {
             nombre: "Picaña Neymar",
-            descripcion: "Picaña seleccionada a las brasas PIRA.",
+            descripcion: "Picaña seleccionada a las brasas PIRA, acompañado de ensalada fresca y papas a elección (francesas, casco o criollas).",
             precio: 68000
         },
         {
             nombre: "T-Bone de Res - Raphiña",
-            descripcion: "500 g de T-bone a las brasas PIRA.",
+            descripcion: "500 g de T-bone a las brasas PIRA, acompañado de ensalada fresca y papas a elección (francesas, casco o criollas).",
             precio: 80000
         },
         {
             nombre: "Salmón",
-            descripcion: "400 g de lomo de salmón.",
+            descripcion: "350 g de lomo de salmón, acompañado de ensalada fresca y arroz",
             precio: 65000
         },
         {
             nombre: "Pechuga Champiñón - League",
-            descripcion: "350 g de pechuga a las brasas con salsa de champiñones.",
+            descripcion: "350 g de pechuga a las brasas con salsa de champiñones, acompañado de ensalada fresca y papas a elección (francesas, casco o criollas).",
             precio: 47000
         },
         {
             nombre: "Punta de Anca de Cerdo - R Gaucha",
-            descripcion: "Corte de cerdo con hueso, de cocción lenta sobre brasas PIRA.",
+            descripcion: "Corte de cerdo con hueso, de cocción lenta sobre brasas PIRA, acompañado de ensalada fresca y papas a elección (francesas, casco o criollas).",
             precio: 52000
         }
     ],
