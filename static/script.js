@@ -424,3 +424,77 @@ document.addEventListener("DOMContentLoaded", () => {
 
     mostrarProductos("Hamburguesas");
 });
+
+
+/* Navegación entre categorías mediante gestos táctiles */
+document.addEventListener("DOMContentLoaded", () => {
+    const categorias = [
+        "Hamburguesas",
+        "Parrilla",
+        "Alitas",
+        "Mazorcadas",
+        "Perros calientes",
+        "Salchipapas",
+        "Menú infantil",
+        "Entradas",
+        "Bebidas",
+        "Adiciones"
+    ];
+
+    const contenido = document.querySelector(".contenido");
+    const barraCategorias = document.querySelector(".categorias");
+
+    if (!contenido || !barraCategorias) return;
+
+    let inicioX = 0;
+    let inicioY = 0;
+
+    contenido.addEventListener("touchstart", (evento) => {
+        const toque = evento.changedTouches[0];
+        inicioX = toque.clientX;
+        inicioY = toque.clientY;
+    }, { passive: true });
+
+    contenido.addEventListener("touchend", (evento) => {
+        const toque = evento.changedTouches[0];
+        const diferenciaX = toque.clientX - inicioX;
+        const diferenciaY = toque.clientY - inicioY;
+
+        // Ignorar movimientos cortos y desplazamientos principalmente verticales.
+        if (
+            Math.abs(diferenciaX) < 80 ||
+            Math.abs(diferenciaX) < Math.abs(diferenciaY) * 1.3
+        ) {
+            return;
+        }
+
+        const botonActivo = barraCategorias.querySelector(".categoria.activa");
+        if (!botonActivo) return;
+
+        const categoriaActual = botonActivo.dataset.categoria;
+        const indiceActual = categorias.indexOf(categoriaActual);
+        if (indiceActual === -1) return;
+
+        // Deslizar a la izquierda: siguiente categoría.
+        // Deslizar a la derecha: categoría anterior.
+        const nuevoIndice = diferenciaX < 0
+            ? indiceActual + 1
+            : indiceActual - 1;
+
+        if (nuevoIndice < 0 || nuevoIndice >= categorias.length) return;
+
+        const siguienteBoton = barraCategorias.querySelector(
+            `[data-categoria="${categorias[nuevoIndice]}"]`
+        );
+
+        if (siguienteBoton) {
+            siguienteBoton.click();
+            siguienteBoton.scrollIntoView({
+                behavior: "smooth",
+                block: "nearest",
+                inline: "center"
+            });
+        }
+    }, { passive: true });
+});
+
