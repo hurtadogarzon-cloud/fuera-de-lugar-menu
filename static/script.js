@@ -289,16 +289,16 @@ const productos = {
     ],
 
     "Bebidas": [
-        { nombre: "Jugo en agua", descripcion: "Descripción no especificada en el documento.", precio: 9000 },
-        { nombre: "Juego en leche", descripcion: "Nombre tal como aparece en el documento original; confirmar si corresponde a «Jugo en leche».", precio: 11000 },
-        { nombre: "Malteadas", descripcion: "Descripción no especificada en el documento.", precio: 17000 },
-        { nombre: "Limonada mango biche", descripcion: "Descripción no especificada en el documento.", precio: 12000 },
-        { nombre: "Limonada natural", descripcion: "Descripción no especificada en el documento.", precio: 8000 },
-        { nombre: "Limonada coco", descripcion: "Descripción no especificada en el documento.", precio: 12000 },
+        { nombre: "Jugo en agua", descripcion: "", precio: 9000 },
+        { nombre: "Juego en leche", descripcion: "", precio: 11000 },
+        { nombre: "Malteadas", descripcion: "", precio: 17000 },
+        { nombre: "Limonada mango biche", descripcion: "", precio: 12000 },
+        { nombre: "Limonada natural", descripcion: "", precio: 8000 },
+        { nombre: "Limonada coco", descripcion: "", precio: 12000 },
         { nombre: "Limonada cerezada", descripcion: "Nombre tal como aparece en el documento original; confirmar escritura.", precio: 12000 },
-        { nombre: "Soda de frutos rojos", descripcion: "Descripción no especificada en el documento.", precio: 15000 },
-        { nombre: "Soda de frutos amarillos", descripcion: "Descripción no especificada en el documento.", precio: 15000 },
-        { nombre: "Gaseosa", descripcion: "Descripción no especificada en el documento.", precio: 6500 }
+        { nombre: "Soda de frutos rojos", descripcion: "", precio: 15000 },
+        { nombre: "Soda de frutos amarillos", descripcion: "", precio: 15000 },
+        { nombre: "Gaseosa", descripcion: "", precio: 6500 }
     ],
 
     "Adiciones": [
