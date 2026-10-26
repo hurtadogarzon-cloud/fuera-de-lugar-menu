@@ -68,7 +68,7 @@ const productos = {
             equipo: true
         },
         {
-            nombre: "Filadelphia",
+            nombre: "Philadelphia",
             descripcion: "150 g de carne madurada, panceta de cerdo en salmuera ahumada y confitada, queso Filadelfia, verduras frescas y papas a elección.",
             precio: 28000,
             equipo: true
@@ -183,7 +183,7 @@ const productos = {
         },
         {
             nombre: "Salmón",
-            descripcion: "350 g de lomo de salmón, acompañado de ensalada fresca y arroz",
+            descripcion: "350 g de lomo de salmón, acompañado de ensalada fresca y pure de papas",
             precio: 65000
         },
         {
@@ -234,38 +234,46 @@ const productos = {
         }
     ],
 
+    
     "Perros calientes": [
         {
             nombre: "Carlos Vela",
             descripcion: "Pan brioche, mozzarella, salchicha americana, pico de gallo, guacamole, jalapeños, nachos y papas a elección.",
-            precio: 25000
+            precio: 25000,
+            equipo: true
         },
         {
             nombre: "Jhon Pinilla",
             descripcion: "Pan brioche clásico, mozzarella, salchicha americana, salsas de la casa, papa cabello de ángel y papas a elección.",
-            precio: 18000
+            precio: 18000,
+            equipo: true
         },
         {
             nombre: "Lukaku",
             descripcion: "Pan brioche, mozzarella, salchicha americana, costillas de cerdo desmechadas en BBQ, cebolla crispy y papas.",
-            precio: 25000
+            precio: 25000,
+            equipo: true
         },
         {
             nombre: "Mbappe",
             descripcion: "Pan brioche, mozzarella, salchicha americana, trozos de pollo con champiñones en bechamel, parmesano y papas.",
-            precio: 28000
+            precio: 28000,
+            equipo: true
         },
         {
             nombre: "Mohamed Salah",
             descripcion: "Pan brioche, mozzarella, salchicha americana, salsa cuatro quesos, tocineta, piña caramelizada y papas.",
-            precio: 28000
+            precio: 28000,
+            equipo: true
         },
         {
             nombre: "René Higuita",
             descripcion: "Pan brioche, mozzarella, salchicha americana, carne desmechada, maíz en salsa criolla de la casa y papas.",
-            precio: 28000
+            precio: 28000,
+            equipo: true
         }
     ],
+
 
     "Salchipapas": [
         {
@@ -287,7 +295,7 @@ const productos = {
         { nombre: "Limonada mango biche", descripcion: "Descripción no especificada en el documento.", precio: 12000 },
         { nombre: "Limonada natural", descripcion: "Descripción no especificada en el documento.", precio: 8000 },
         { nombre: "Limonada coco", descripcion: "Descripción no especificada en el documento.", precio: 12000 },
-        { nombre: "Limonada cereza da", descripcion: "Nombre tal como aparece en el documento original; confirmar escritura.", precio: 12000 },
+        { nombre: "Limonada cerezada", descripcion: "Nombre tal como aparece en el documento original; confirmar escritura.", precio: 12000 },
         { nombre: "Soda de frutos rojos", descripcion: "Descripción no especificada en el documento.", precio: 15000 },
         { nombre: "Soda de frutos amarillos", descripcion: "Descripción no especificada en el documento.", precio: 15000 },
         { nombre: "Gaseosa", descripcion: "Descripción no especificada en el documento.", precio: 6500 }
@@ -305,27 +313,27 @@ const productos = {
 
     "Entradas": [
         {
-            nombre: "Papas Golazo",
+            nombre: "Papas Golazo (Entrada 1)",
             descripcion: "Papa criolla, chorizo y limón.",
             precio: 18000
         },
         {
-            nombre: "Patacón de Primera",
+            nombre: "Patacón de Primera (Entrada 2)",
             descripcion: "4 croquetas de patacón con hogao y queso rallado.",
             precio: 18000
         },
         {
-            nombre: "Nachos de Titular",
+            nombre: "Nachos de Titular (Entrada 3)",
             descripcion: "Nachos con carne molida en salsa mexicana y guacamole.",
             precio: 26000
         },
         {
-            nombre: "Papas de Calentamiento",
+            nombre: "Papas de Calentamiento (Entrada 4)",
             descripcion: "Papa criolla, chicharrón y guacamole.",
             precio: 28000
         },
         {
-            nombre: "Papas Tiro Libre Queso y Tocineta",
+            nombre: "Papas Tiro Libre Queso y Tocineta (Entrada 5)",
             descripcion: "Papitas francesas crocantes, bañadas en salsa cheddar y coronadas con tocineta crujiente.",
             precio: 26000
         }
