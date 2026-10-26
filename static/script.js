@@ -295,7 +295,7 @@ const productos = {
         { nombre: "Limonada mango biche", descripcion: "", precio: 12000 },
         { nombre: "Limonada natural", descripcion: "", precio: 8000 },
         { nombre: "Limonada coco", descripcion: "", precio: 12000 },
-        { nombre: "Limonada cerezada", descripcion: "Nombre tal como aparece en el documento original; confirmar escritura.", precio: 12000 },
+        { nombre: "Limonada cerezada", descripcion: "", precio: 12000 },
         { nombre: "Soda de frutos rojos", descripcion: "", precio: 15000 },
         { nombre: "Soda de frutos amarillos", descripcion: "", precio: 15000 },
         { nombre: "Gaseosa", descripcion: "", precio: 6500 }
