@@ -374,7 +374,7 @@ function crearTarjeta(producto) {
                 <strong>${formatoPrecio(producto.precio)}</strong>
             </div>
             <div class="precio">
-                <span>EN EQUIPO 🍟🥤</span>
+                <span>EN EQUIPO 🍟+🥤</span>
                 <strong>${formatoPrecio(producto.precio + 10000)}</strong>
             </div>
         `;
