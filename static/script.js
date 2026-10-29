@@ -219,17 +219,17 @@ const productos = {
     "Mazorcadas": [
         {
             nombre: "Mazorcada Goleadora Súper Especial",
-            descripcion: "Maíz, 100 g de carne de res, 100 g de pollo, salteado, tocineta, salsa de maíz, papa cabello de ángel y queso a elección: costeño, mozzarella o campesino.",
+            descripcion: "Maíz, 100 g de carne de res, 100 g de pollo, salteado, tocineta, salsa de maíz, papa cabello de ángel y queso a elección (costeño, mozzarella o campesino).",
             precio: 37000
         },
         {
             nombre: "Mazorcada Goleadora Especial",
-            descripcion: "Maíz, 100 g de carne de res, 100 g de cerdo, 100 g de pollo, 100 g de chorizo, salteado, tocineta, salsa de maíz, papa cabello de ángel y queso a elección.",
+            descripcion: "Maíz, 100 g de carne de res, 100 g de cerdo, 100 g de pollo, 100 g de chorizo, salteado, tocineta, salsa de maíz, papa cabello de ángel y queso a elección (costeño, mozzarella o campesino).",
             precio: 26000
         },
         {
             nombre: "Mazorcada Vegetariana - Juego Limpio",
-            descripcion: "Maíz, 100 g de champiñones, 100 g de zucchini, salteado, salsa de maíz, papa cabello de ángel, queso a elección y cebolla crispy.",
+            descripcion: "Maíz, 100 g de champiñones, 100 g de zucchini, salteado, salsa de maíz, papa cabello de ángel,  y queso a elección (costeño, mozzarella o campesino).",
             precio: 22000
         }
     ],
@@ -283,7 +283,7 @@ const productos = {
         },
         {
             nombre: "Salchipapa Monterrey",
-            descripcion: "Papas a la francesa, salchicha, trozos de costilla de cerdo, queso gratinado y piña caramelizada.",
+            descripcion: "Papas a la francesa, salchicha, chicharrón, platano maduro, pico de gallo y guacamole.",
             precio: 38000
         }
     ],
