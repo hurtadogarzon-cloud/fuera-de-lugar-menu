@@ -219,12 +219,12 @@ const productos = {
     "Mazorcadas": [
         {
             nombre: "Mazorcada Goleadora Súper Especial",
-            descripcion: "Maíz, 100 g de carne de res, 100 g de pollo, salteado, tocineta, salsa de maíz, papa cabello de ángel y queso a elección (costeño, mozzarella o campesino).",
+            descripcion: "Maíz, 100 g de carne de res, 100 g de cerdo, 100 g de pollo, 100 g de chorizo, salteado, tocineta, salsa de maíz, papa cabello de ángel y queso a elección (costeño, mozzarella o campesino).",
             precio: 37000
         },
         {
             nombre: "Mazorcada Goleadora Especial",
-            descripcion: "Maíz, 100 g de carne de res, 100 g de cerdo, 100 g de pollo, 100 g de chorizo, salteado, tocineta, salsa de maíz, papa cabello de ángel y queso a elección (costeño, mozzarella o campesino).",
+            descripcion: "Maíz, 100 g de carne de res, 100 g de pollo, salteado, tocineta, salsa de maíz, papa cabello de ángel y queso a elección (costeño, mozzarella o campesino).",
             precio: 26000
         },
         {
